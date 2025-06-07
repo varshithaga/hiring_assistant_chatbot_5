@@ -1,0 +1,94 @@
+user_id,question,answer
+8dcc6aa3-3129-42a1-8066-8db310ebb638,"**Data Handling & Frameworks:**  ""Describe a scenario where you'd choose a NoSQL database over SQL, and explain your reasoning, including potential framework choices (e.g., Django/Flask with MongoDB vs. Django/Flask with PostgreSQL)."" (Assesses database knowledge, framework understanding, and practical decision-making)","I’d choose a NoSQL database like MongoDB over SQL (PostgreSQL) in scenarios where the data is unstructured or semi-structured, like in a social media app with dynamic post content (text, images, comments). MongoDB’s flexible document model and horizontal scalability make it easier to handle this type of data and high user activity.
+
+For frameworks, I’d use Flask with MongoDB (via Flask-PyMongo) for rapid prototyping and lightweight handling of JSON-like data. Django with PostgreSQL would be better suited for structured, relational data (like e-commerce with consistent fields). In short, NoSQL is ideal when data flexibility and horizontal scaling are critical."
+8dcc6aa3-3129-42a1-8066-8db310ebb638,"**API Interaction & Debugging:** ""You're using Postman to test a REST API built with Flask (or Django REST framework). You receive a 500 Internal Server Error. Describe your debugging process, including tools and techniques you'd use to pinpoint the problem."" (Assesses API testing skills, debugging abilities, and framework familiarity)","If I get a 500 Internal Server Error when testing an API in Postman, I’d:
+
+- Check the response body in Postman for error details.
+- Check server logs (Flask console or Django runserver output).
+-Enable debug mode (Flask’s debug=True or Django’s DEBUG=True).
+- Validate request data (e.g., JSON syntax, required fields).
+- Use debuggers like pdb to inspect code at runtime.
+- If needed, update Postman request (method, headers, body)."
+8dcc6aa3-3129-42a1-8066-8db310ebb638,"**Concurrency & Efficiency (Java/Python):** ""Explain the difference between a thread and a process in Java (or Python). Describe a situation where using multithreading (or multiprocessing) would improve the performance of an application, and briefly outline how you'd implement it.""  (Assesses fundamental concurrency concepts and their practical application in different languages)","Thread vs. Process:
+Threads share memory within a process; processes are independent.
+
+Use case:
+Use multithreading for network-bound tasks (like downloading files) to speed up I/O operations. In Python, I’d use the threading module; in Java, ExecutorService for managing threads."
+8dcc6aa3-3129-42a1-8066-8db310ebb638,"**Frontend & Version Control:** ""You're building a React component that fetches data from a Django/Flask backend API. Describe the general workflow, from fetching the data in React to handling potential errors.  How would you manage different versions of your React code using Git?"" (Assesses front-end integration with backend, error handling, and version control)
+
+These questions encourage the candidate to explain their thought process and demonstrate practical knowledge, rather than just reciting facts.  You can adjust the specific framework or language aspects to better suit the seniority level of the role","Workflow:
+Use fetch or axios in React to call the backend API, handle responses with .then/.catch, and update state. If there’s an error (like 500), show a friendly error message in the UI.
+
+Version control:
+Use Git branches for new features (feature-branch) and tags/releases to manage versions."
+55d3f8ac-f2f1-4efa-8257-f4cc678894a8,"**Data Visualization & SQL:** ""Describe a scenario where you needed to create a complex visualization in Power BI or Tableau using data sourced from a SQL database.  What were the biggest challenges you faced, and how did you overcome them?"" (Assesses data visualization design, SQL query writing, problem-solving)","I created a Power BI dashboard to visualize customer trends from a SQL database. The biggest challenge was optimizing complex joins and nested queries for performance, which I overcame by creating SQL views and using indexed tables to reduce load time."
+55d3f8ac-f2f1-4efa-8257-f4cc678894a8,"**Power BI/Tableau Specifics:** ""Explain the differences between calculated columns and measures in Power BI (or equivalent in Tableau). Provide an example where one would be preferred over the other."" (Assesses understanding of core concepts within a specific BI tool)","Difference:
+
+Calculated columns: evaluated per row in the data table.
+Measures: calculated at query time based on the current filter context.
+
+Example:
+Use a calculated column to store a static ""profit margin"" per sale; use a measure to compute total profit on the fly in visuals.
+"
+55d3f8ac-f2f1-4efa-8257-f4cc678894a8,"**API Interaction & Data Transformation (Postman & Excel/SQL):**  ""You need to retrieve JSON data from a REST API using Postman and then import it into an Excel spreadsheet for further analysis.  Describe your process, including handling potential errors and data cleaning steps."" (Assesses API interaction, data transformation, and error handling)","I’d use Postman to send the request and export the JSON response as a `.json` file. In Excel, I’d use Power Query to import the file, transform it (e.g., flatten nested JSON), and clean it by removing unnecessary fields and fixing data types. I’d also handle API errors by checking Postman’s response codes and validating the JSON structure.
+"
+55d3f8ac-f2f1-4efa-8257-f4cc678894a8,"**SQL Optimization:** ""You have a SQL query that is performing very slowly. Describe several strategies you would use to identify the bottleneck and optimize the query's performance."" (Assesses SQL query optimization knowledge, including indexing, query rewriting, and profiling)","I’d start by using EXPLAIN to analyze the query plan and find slow operations. Then, I’d add or optimize indexes, rewrite joins or subqueries for efficiency, and avoid unnecessary columns or calculations. Finally, I’d check for table statistics updates and consider caching or partitioning if needed.
+"
+55d3f8ac-f2f1-4efa-8257-f4cc678894a8,"**Data Visualization Best Practices:** ""Explain your understanding of effective data visualization principles, providing examples of how you would choose the appropriate chart type to communicate different types of data effectively."" (Assesses theoretical understanding of effective visualization, not just tool proficiency)
+
+
+These questions encourage the candidate to go beyond simple recall and demonstrate practical application of their skills and problem-solving abilities. Remember to adjust the difficulty based on the seniority level of the role","Effective data visualization should be clear, simple, and focused on the message. For example, use bar charts to compare categories, line charts to show trends over time, and pie charts for showing parts of a whole. Avoid clutter and use colors thoughtfully to highlight key insights.
+"
+ff94dc03-ed63-44a8-aab0-ac57e94cf5b2,"**Python/Data Structures:**  ""Describe a scenario where you would choose a list comprehension over a traditional `for` loop in Python, and provide a code example illustrating the performance difference (or potential for improvement)."" (Assesses Python fluency, understanding of data structures and performance optimization.)","# Using for loop
+result = []
+for x in range(1000000):
+    result.append(x * 2)
+
+# Using list comprehension
+result = [x * 2 for x in range(1000000)]
+"
+ff94dc03-ed63-44a8-aab0-ac57e94cf5b2,"**R/Data Wrangling:** ""You have a large dataset in R with messy column names and inconsistent data types. Describe your approach to cleaning and preparing this data for analysis, including specific R functions you would use."" (Assesses R proficiency, data manipulation skills, and knowledge of relevant packages like `dplyr` or `tidyr`.)","I’d use the `janitor` package to clean column names (`clean_names()`), then `dplyr` functions like `mutate()` to fix data types, and `tidyr` to handle missing values or reshape data. For example, `as.numeric()` to convert columns and `drop_na()` to remove rows with missing data.
+"
+ff94dc03-ed63-44a8-aab0-ac57e94cf5b2,"**SQL/Database Design:** ""Design a SQL database schema for a simple e-commerce application, including tables for products, customers, and orders.  Define primary and foreign keys and explain your choices."" (Assesses database design fundamentals, understanding of relational databases, and normalization concepts.)","
+Schema:
+
+Products: product_id (PK), name, price, stock
+
+Customers: customer_id (PK), name, email
+
+Orders: order_id (PK), customer_id (FK), order_date
+
+OrderItems: order_item_id (PK), order_id (FK), product_id (FK), quantity
+
+Explanation:
+Primary keys uniquely identify records. Foreign keys link orders to customers and order items to both orders and products, ensuring data integrity and enabling normalized design."
+ff94dc03-ed63-44a8-aab0-ac57e94cf5b2,"**MongoDB/NoSQL:**  ""Compare and contrast MongoDB and SQL databases.  When would you choose one over the other, and what are the trade-offs?"" (Assesses understanding of NoSQL databases, their strengths and weaknesses compared to relational databases, and the ability to choose the right tool for the job.)","**MongoDB vs. SQL:**
+MongoDB is schema-flexible, stores data as JSON-like documents, and scales horizontally. SQL databases have fixed schemas, use tables with relations, and provide strong ACID transactions.
+
+**When to choose:**
+Use MongoDB for unstructured or rapidly changing data, like content management or IoT. Use SQL for structured data with complex relationships, like financial or inventory systems.
+
+**Trade-offs:**
+MongoDB sacrifices some consistency for flexibility and scalability, while SQL ensures data integrity but can be less flexible and harder to scale horizontally.
+"
+ff94dc03-ed63-44a8-aab0-ac57e94cf5b2,"**Excel/Data Analysis:** ""You have an Excel spreadsheet containing sales data for different products over several months.  Describe how you would use Excel to calculate the year-over-year growth rate for each product and identify the top-performing product."" (Assesses practical Excel skills including data analysis, formula usage (e.g., `SUMIF`, `GROWTH`), and potentially pivot tables.)
+
+
+These questions encourage candidates to explain their *reasoning* and not just provide single-word answers, thus allowing for a deeper assessment of their technical skills and problem-solving abilities","I’d use Excel formulas like `SUMIFS` to calculate total sales per year for each product, then compute the growth rate using `=(NewYearSales - OldYearSales) / OldYearSales`. Finally, I’d use a pivot table or `MAX` function to find the product with the highest growth.
+"
+a2813d78-8c6a-4150-b775-a9c82f5260e6,"**Data Visualization & SQL:** ""Describe a scenario where you needed to create a dashboard in Power BI (or Tableau) to visualize data from a SQL database.  What challenges did you face, and how did you overcome them? Focus on the data manipulation and visualization choices you made.""  (Assesses data modeling, SQL querying, visualization strategy, and problem-solving.)","I built a Power BI dashboard for sales trends from a SQL database. Challenges included complex joins and ensuring data freshness. I created SQL views for simpler data models and used line charts and bar charts in Power BI for clear, interactive visuals.
+"
+a2813d78-8c6a-4150-b775-a9c82f5260e6,"**API Interaction & Data Processing:** ""Using Postman, how would you retrieve data from a REST API (assume JSON response), clean it (mention specific cleaning tasks you might encounter), and then import it into an Excel spreadsheet for further analysis?  What considerations would you have for handling errors?"" (Assesses API interaction, data cleaning, data import, error handling.)","I’d use Postman to get the JSON data, export it, and use Excel’s Power Query to import and flatten the JSON. Cleaning would include fixing data types, renaming columns, and removing duplicates. For errors, I’d check the API status codes in Postman and validate the JSON before importing to Excel.
+"
+a2813d78-8c6a-4150-b775-a9c82f5260e6,"**NoSQL & Data Modeling:**  ""Compare and contrast the use of SQL and NoSQL databases.  Give an example where a NoSQL database would be a better choice than a relational database, and explain why."" (Assesses database understanding and appropriate database selection.)","**SQL** databases have structured schemas, strict relationships, and support complex queries, while **NoSQL** databases are more flexible, handle unstructured data, and scale horizontally.
+
+For example, a social media app with dynamic, user-generated content (posts, comments) is better suited to NoSQL because it easily handles nested, changing structures.
+"
+a2813d78-8c6a-4150-b775-a9c82f5260e6,"**Version Control & Collaboration:** ""Describe your experience with Git.  How would you handle a merge conflict when collaborating on a Power BI report with another developer?"" (Assesses version control knowledge and collaboration practices.)","I use Git for version control. When merging Power BI report changes, I’d pull the latest branch, handle conflicts (like .pbix file conflicts) by discussing changes with the team, and manually reconcile or rebuild visuals to ensure no work is lost.
+"
+a2813d78-8c6a-4150-b775-a9c82f5260e6,"**Advanced Data Visualization:** ""Explain a time you had to choose between different chart types (e.g., bar chart, scatter plot, map) to effectively represent data. What factors influenced your decision?"" (Assesses understanding of appropriate chart selection based on data characteristics and communication goals).
+
+
+These questions encourage the candidate to go beyond simple ""yes/no"" answers and demonstrate their practical experience and problem-solving abilities.  Remember to tailor the difficulty and specifics based on the seniority level of the role","I once chose a scatter plot over a bar chart to show correlation between two continuous variables. The decision was based on the need to show patterns and outliers clearly, rather than simple totals or comparisons.
+"
